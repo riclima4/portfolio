@@ -16,13 +16,18 @@ export default function Header() {
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#joke" className="nav__link">
+                        <a href="#api1" className="nav__link">
                             <i className="uil uil-nerd nav__icon"></i> Joke
                         </a>
                     </li>
                     <li className="nav__item">
-                        <a href="#quote" className="nav__link">
+                        <a href="#pokeapi2" className="nav__link">
                             <i className="uil uil-comment nav__icon"></i> Quote
+                        </a>
+                    </li>
+                    <li className="nav__item">
+                        <a href="#contacto" className="nav__link">
+                            <i className="uil uil-nerd nav__icon"></i> Contact
                         </a>
                     </li>
                 </ul>
