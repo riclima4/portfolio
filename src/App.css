@@ -168,7 +168,9 @@ img {
   display: inline-flex;
   align-items: center;
 }
-
+.centerText{
+  text-align: center;
+}
 /*=============== BREAKPOINTS ===============*/
 /* For large devices */
 @media screen and (max-width: 992px) {
