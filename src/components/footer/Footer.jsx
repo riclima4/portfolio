@@ -8,13 +8,13 @@ export default function Footer() {
             <h1 className="footer__title">Lima</h1>
             <ul className="footer__list">
                 <li>
-                    <a href="#home" className="footer__link">Home</a>
+                    <a href="/home" className="footer__link">Home</a>
                 </li>
                 <li>
-                    <a href="#api1" className="footer__link">Api1</a>
+                    <a href="/pokeapi" className="footer__link">PokeApi</a>
                 </li>
                 <li>
-                    <a href="#api2" className="footer__link">Api2</a>
+                    <a href="/joke" className="footer__link">Joke</a>
                 </li>
             </ul>
             <div className="footer__social">

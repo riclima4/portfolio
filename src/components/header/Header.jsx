@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import "./header.css"
 
 export default function Header() { 
@@ -7,28 +8,23 @@ export default function Header() {
   return (
     <header className='header'>
         <nav className="nav container">
-            <a href="" className="nav__logo">Ricardo Lima</a>
+            <Link to="/" className="nav__logo">Ricardo Lima</Link>
             <div className={Toggle ? "nav__menu show-menu": "nav__menu"}>
                 <ul className="nav__list grid">
                     <li className="nav__item">
-                        <a href="#home" className="nav__link">
+                        <Link to="/" className="nav__link">
                             <i className="uil uil-home nav__icon"></i> Home
-                        </a>
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a href="#api1" className="nav__link">
-                            <i className="uil uil-nerd nav__icon"></i> Joke
-                        </a>
+                        <Link to="/pokeapi" className="nav__link">
+                            <i className="uil uil-nerd nav__icon"></i> PokeApi
+                        </Link>
                     </li>
                     <li className="nav__item">
-                        <a href="#pokeapi2" className="nav__link">
-                            <i className="uil uil-comment nav__icon"></i> Quote
-                        </a>
-                    </li>
-                    <li className="nav__item">
-                        <a href="#contacto" className="nav__link">
-                            <i className="uil uil-nerd nav__icon"></i> Contact
-                        </a>
+                        <Link to="/joke" className="nav__link">
+                            <i className="uil uil-comment nav__icon"></i> Joke
+                        </Link>
                     </li>
                 </ul>
 
