@@ -2,35 +2,66 @@ import React,{useState,useEffect} from 'react'
 import Footer from '../../components/footer/Footer'
 import './pokeapi.css'
 import axios from 'axios'
+import Card from './Card'
+import Pokeinfo from './Pokeinfo'
 
-export default function pokeapi() {
-  // const url = 'https://official-joke-api.appspot.com/random_joke'
+export default function Pokeapi() {
+  const link = 'https://pokeapi.co/api/v2/pokemon/'
+  const [pokeData, setPokeData]=useState([]);
+  const [loading, setLoading]=useState(true);
+  const [url,setUrl] = useState(link);
+  const [nextUrl, setNextUrl] = useState();
+  const [prevUrl, setPrevUrl] = useState();
+  const [pokeDex, setPokeDex] = useState();
   
+  const getData = async () =>{
+    setLoading(true)
+    const res = await axios.get(url)
+    setNextUrl(res.data.next)
+    setPrevUrl(res.data.previous)
+    getPokemon(res.data.results)
+    setLoading(false)
+    
+  }
+  const getPokemon = async (res)=>{
+    res.map(async(item)=>{
+      const result = await axios.get(item.url)
+      setPokeData(state=>{
+        state=[...state,result.data]
+        state.sort((a,b)=>a.id>b.id?1:-1)
+        return state;
+      })
 
-  // const [joke, setJoke] = useState([]);
-
-  // const getData = async () =>{
-  //   const res = await axios.get(url)
-  //   if(!res) return
-  //   console.log(res.data)
-  //   setJoke(res.data)
-  // }
-
-  // useEffect(()=>{
-  //   getData();
-  // },[])
+    })
+  }
+ useEffect(()=>{
+   getData();
+ },[url])
 
 
   return (
     <>
-    {/* <section className="home section" id="home">
-        <div className="joke__container container grid">
+    <section className="home section">
+        <div className="poke__container container">
           <h1 className="section__title">Pokedex!</h1>
-          <p className='joke__description' key={joke.id}>{joke.setup} - {joke.punchline}</p>
-          <button className='button centerText' onClick={()=>{getData()}}>Another one</button>
+            <Pokeinfo data={pokeDex} />
+          <div className="pokemons">
+            <Card pokemon={pokeData} loading={loading} infoPokemon={poke=>setPokeDex(poke)}/>           
+            <div className="btn-group">
+              { prevUrl && <button onClick={()=>{
+                setPokeData([])
+                setUrl(prevUrl)
+              }}>PREVIOUS</button>}
+              {nextUrl && <button onClick={()=>{
+                setPokeData([])
+                setUrl(nextUrl)
+              }}>NEXT</button>}
+            </div>
+          </div>
         </div>
         
-    </section> */}
+        
+    </section>
     <Footer/>
     </>
   )
