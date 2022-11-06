@@ -5,13 +5,13 @@ export default function Footer() {
   return (
     <footer className="footer">
         <div className="footer__container container">
-            <h1 className="footer__title">Lima</h1>
+            <h1 className="footer__title">Trabalho de Aplicação Web</h1>
             <ul className="footer__list">
                 <li>
                     <a href="/home" className="footer__link">Home</a>
                 </li>
                 <li>
-                    <a href="/pokeapi" className="footer__link">PokeApi</a>
+                    <a href="/pokeapi" className="footer__link">Pokedex</a>
                 </li>
                 <li>
                     <a href="/joke" className="footer__link">Joke</a>
@@ -28,7 +28,7 @@ export default function Footer() {
                     <i className="bx bxl-github"></i>
                 </a>
             </div>
-            <span className='footer__copy'>&#169; All rights reserved</span>
+            <span className='footer__copy'>&#169; Todos os direitos reservados</span>
         </div>
     </footer>
   )

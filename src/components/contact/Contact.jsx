@@ -4,8 +4,8 @@ import './contact.css'
 export default function Contact() {
   return (
    <section className="contacto section" id='contacto'>
-    <h2 className="section__title">Need something?</h2>
-    <span className="section__subtitle">Contact Me</span>
+    <h2 className="section__title">Precisa de algo?</h2>
+    <span className="section__subtitle">Contactar</span>
 
     <div className="contact__container container grid">
         <div className="contact__content">
@@ -26,20 +26,20 @@ export default function Contact() {
             </div>
         </div>
         <div className="contact__content">
-            <h3 className="contact__title">Say something!</h3>
+            <h3 className="contact__title">Diz alguma coisa!</h3>
 
             <form className="contact__form">
                 <div className="contact__form-div">
-                    <label className="contact__form-tag">Name</label>
-                    <input type="text" name='name' className='contact__form-input' placeholder='Insert yout name' />
+                    <label className="contact__form-tag">Nome</label>
+                    <input type="text" name='name' className='contact__form-input' placeholder='Inserir o seu nome' />
                 </div>
                 <div className="contact__form-div">
                     <label className="contact__form-tag">Email</label>
-                    <input type="email" name='email' className='contact__form-input' placeholder='Insert yout email' />
+                    <input type="email" name='email' className='contact__form-input' placeholder='Inserir o email' />
                 </div>
                 <div className="contact__form-div contact__form-area">
-                    <label className="contact__form-tag">Message</label>
-                    <textarea name="project" cols="30" rows="10" className='contact__form-input'placeholder='Insert yout message'></textarea>
+                    <label className="contact__form-tag">Menssagem</label>
+                    <textarea name="project" cols="30" rows="10" className='contact__form-input'placeholder='Escreva a sua mensagem'></textarea>
                 </div>
 
                 <button className="button button--flex">

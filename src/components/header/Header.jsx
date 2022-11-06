@@ -18,7 +18,7 @@ export default function Header() {
                     </li>
                     <li className="nav__item">
                         <Link to="/pokeapi" className="nav__link">
-                            <i className="uil uil-nerd nav__icon"></i> PokeApi
+                            <i className="uil uil-nerd nav__icon"></i> Pokedex
                         </Link>
                     </li>
                     <li className="nav__item">

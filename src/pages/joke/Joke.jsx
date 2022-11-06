@@ -6,8 +6,6 @@ import axios from 'axios'
 
 export default function Joke() {
   const url = 'https://official-joke-api.appspot.com/random_joke'
-  
-
   const [joke, setJoke] = useState([]);
 
   const getData = async () =>{
@@ -28,7 +26,7 @@ export default function Joke() {
         <div className="joke__container container grid">
           <h1 className="section__title">A Joke for you!</h1>
           <p className='joke__description' key={joke.id}>{joke.setup} - {joke.punchline}</p>
-          <button className='button centerText' onClick={()=>{getData()}}>Another one</button>
+          <button className='button centerText' onClick={()=>{getData()}}>Outra piada</button>
         </div>
         
     </section>

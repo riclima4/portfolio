@@ -58,9 +58,7 @@ export default function Pokeapi() {
               }}>NEXT</button>}
             </div>
           </div>
-        </div>
-        
-        
+        </div> 
     </section>
     <Footer/>
     </>
