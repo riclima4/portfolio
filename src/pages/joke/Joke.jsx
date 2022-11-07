@@ -26,9 +26,9 @@ export default function Joke() {
     <>
     <section className="home section" id="home">
         <div className="joke__container container grid">
-          <h1 className="section__title">A Joke for you!</h1>
+          <h1 className="section__title">Uma piada!</h1>
           <p className='joke__description' key={joke.id}>{joke.setup} - {joke.punchline}</p>
-          <button className='button centerText' onClick={()=>{getData()}}>Another one</button>
+          <button className='button centerText' onClick={()=>{getData()}}>Outra piada</button>
         </div>
         
     </section>

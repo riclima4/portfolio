@@ -24,29 +24,23 @@ export default function Pokeinfo({data}) {
     }
     const defaultBackground = 'black';
   return (
+    
     <>
     {
-        
         (!data)?(<h2>Selecione um pokemon</h2>):(
-            <>
-            <div className="pokemon-card-info" key={data.id}>
+            <div className="pokemon-card-info">
                 <h2>{data.name}</h2>
-                <img src={data.sprites.other.dream_world.front_default} alt="pokemon" />
-
+                <img src={data.sprites.other.dream_world.front_default} alt="pokemon"/>
                 <div className="type">
                 {
-                        
-                        data.types.map((poke)=>{
-                            return(
-                                <>
-                                    <div className="group" style = {{background: backgrounds[poke.type.name] || defaultBackground }}>{poke.type.name}</div>
-                                </>
-                            )
-                        })
-                    }
+                data.types.map((poke)=>{
+                    return(
+                        <div key={data.id +'-'+poke.type.url} className="group" style = {{background: backgrounds[poke.type.name] || defaultBackground }}>{poke.type.name}</div>
+                    )
+                })
+                }
                 </div>
             </div>
-            </>
         )
     }
     

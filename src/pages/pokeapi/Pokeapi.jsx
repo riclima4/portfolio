@@ -51,11 +51,11 @@ export default function Pokeapi() {
               { prevUrl && <button onClick={()=>{
                 setPokeData([])
                 setUrl(prevUrl)
-              }}>PREVIOUS</button>}
+              }}>Anterior</button>}
               {nextUrl && <button onClick={()=>{
                 setPokeData([])
                 setUrl(nextUrl)
-              }}>NEXT</button>}
+              }}>Proximo</button>}
             </div>
           </div>
         </div>
