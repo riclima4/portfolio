@@ -6,8 +6,6 @@ import axios from 'axios'
 
 export default function Joke() {
   const url = 'https://official-joke-api.appspot.com/random_joke'
-  
-
   const [joke, setJoke] = useState([]);
 
   const getData = async () =>{
